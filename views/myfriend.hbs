@@ -1,0 +1,29 @@
+<h1>My following</h1>
+
+<div id="card">
+{{#if users.info.following}}
+  <table>
+    <tbody>
+      
+      {{#each users.info.following}}
+      <tr>
+        <td>
+          
+          <form action="/myfriends/remove" method="POST">
+          <input type="hidden" name="id" value="{{_id}}">
+          <p><strong>Имя</strong> <span class="price">  {{name}}</span></p>
+          <p><strong>Email</strong> <span class="price">  {{email}}</span></p>
+          <button class="btn red">delete</button>
+          </form>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  
+  
+{{else}}
+  <p>Zero following</p>
+{{/if}}
+</div>

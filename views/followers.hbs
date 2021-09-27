@@ -1,0 +1,26 @@
+<h1>My follower</h1>
+
+<div id="card">
+{{#if users.info.followers}}
+  <table>
+    <tbody>
+      
+      {{#each users.info.followers}}
+      <tr>
+        <td>
+          <input type="hidden" name="id" value="{{_id}}">
+          <p><strong>Имя</strong> <span class="price">  {{name}}</span></p>
+          <p><strong>Email</strong> <span class="price">  {{email}}</span></p>
+          </form>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  
+  
+{{else}}
+  <p>Zero followers</p>
+{{/if}}
+</div>

@@ -1,0 +1,52 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo">MobiDevAppTest</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      {{#if isAuth}}
+
+      {{#if isHome}}
+      <li class="active"><a href="/">Profile</a></li>
+      {{else}}
+        <li><a href="/">Profile</a></li>
+      {{/if}}
+
+      {{#if isFriends}}
+        <li class="active"><a href="/friends">People</a></li>
+      {{else}}
+        <li><a href="/friends">People</a></li>
+      {{/if}}
+
+      {{#if myFriends}}
+        <li class="active"><a href="/myfriends">My following</a></li>
+      {{else}}
+        <li><a href="/myfriends">My following</a></li>
+      {{/if}}
+
+      {{#if myFollowers}}
+        <li class="active"><a href="/followers">Followers</a></li>
+      {{else}}
+        <li><a href="/followers">Followers</a></li>
+      {{/if}}
+
+      <li><a href="/auth/logout">Logout</a></li>
+
+      {{else}}
+
+      {{#if isFriends}}
+        <li class="active"><a href="/friends">People</a></li>
+      {{else}}
+        <li><a href="/friends">People</a></li>
+      {{/if}}
+      
+      {{#if isLogin}}
+      <li class="active"><a href="/auth/login">Login</a></li>
+      {{else}}
+        <li><a href="/auth/login">Login</a></li>
+      {{/if}}
+
+      {{/if}}
+      
+      
+    </ul>
+  </div>
+</nav>
